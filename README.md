@@ -4,9 +4,9 @@ A simple Flask web application with user login, signup, and TÜBİTAK demo pages
 
 # Installation
 
-**Clone the repository:**
+**Clone the repository**
 
-   ```bash
+bash
    git clone https://github.com/elflrsdglab/PythonProject1.git
    cd PythonProject1
    
