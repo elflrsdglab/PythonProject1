@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Ankara Universities</h1>
+
+<form method="get" class="search">
+  <input name="q" value="{{ q or '' }}" placeholder="Search by name or address">
+  <button type="submit">Search</button>
+</form>
+
+<table class="table">
+  <thead>
+    <tr><th>#</th><th>Name</th><th>Address</th><th>Website</th></tr>
+  </thead>
+  <tbody>
+  {% for u in unis %}
+    <tr>
+      <td>{{ u.id }}</td>
+      <td><a href="{{ url_for('uni_details', uid=u.id) }}">{{ u.name }}</a></td>
+      <td>{{ u.address }}</td>
+      <td><a href="{{ u.website }}" target="_blank">Link</a></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

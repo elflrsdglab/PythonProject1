@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>TÜBİTAK Units</h1>
+<ul class="cards">
+  {% for u in units %}
+    <li class="card">
+      <h3><a href="{{ url_for('tubitak_details', slug=u.slug) }}">{{ u.name }}</a></h3>
+      <p>{{ u.desc }}</p>
+      <p><a href="{{ u.website }}" target="_blank">Website</a></p>
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}
